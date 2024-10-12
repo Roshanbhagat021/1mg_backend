@@ -11,8 +11,9 @@ const blogController = require("./controllers/blog.controller")
 
 // Use CORS middleware
 app.use(cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true
+    // origin: process.env.CLIENT_URL,
+    origin: true,
+    // credentials: true
 }));
 
 app.use(express.json())
