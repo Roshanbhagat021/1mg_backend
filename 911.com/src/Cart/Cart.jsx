@@ -68,13 +68,31 @@ const removeOperation = (id)=>{
        
 }
 
-const getData=()=>{
-  return axios.get("http://localhost:8000/cart").then((res)=>{
-      setData(res.data)
+// const getData=()=>{
+//   return axios.get("http://localhost:8000/cart").then((res)=>{
+//       setData(res.data)
      
-    })
+//     })
     
-}
+// }
+const getData = () => {
+  const token = localStorage.getItem("token"); // Retrieve the token from local storage
+  // console.log('token: ', token);
+
+  return axios.get("http://localhost:8000/cart", {
+    headers: {
+      Authorization: `Bearer ${token}` // Add the token to the Authorization header
+    }
+  })
+  .then((res) => {
+    console.log('res: ', res);
+    setData(res.data);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });
+};
+
 
 const incrementQuantity=(id)=>{
   return axios.post("http://localhost:8000/cart",{

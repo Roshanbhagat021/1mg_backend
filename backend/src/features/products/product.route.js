@@ -64,7 +64,8 @@ productRoute.get("/", async (req, res) => {
   }
 });
 
-productRoute.get("/allproduct",adminValidation,async(req, res) => {
+// adminValidation
+productRoute.get("/allproduct",async(req, res) => {
       let load=req.query.num || 1;
   try {
     

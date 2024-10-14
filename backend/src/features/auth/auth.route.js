@@ -52,7 +52,7 @@ userRoute.post("/login", async (req, res) => {
               // result == 
              // console.log(password===hash_password,result);
               if(result){
-                  var token = jwt.sign({ "userId": user[0]._id }, process.env.SECRET_KEY);
+                  var token = jwt.sign({ "userId": user[0]._id }, process.env.SECRET_KEY); 
                   res.send({"msg":"login successfull","login":true,"token":token,"user":userData})
                  
               }
@@ -68,8 +68,8 @@ userRoute.post("/login", async (req, res) => {
   } catch (error) {
       console.log(error)
   }
- 
-  userRoute.get("/alluser",adminValidation ,async (req, res) => {
+  // adminValidation use this as middelware in this route
+  userRoute.get("/alluser" ,async (req, res) => {
 
       try {
         let users=await UserModel.find({})

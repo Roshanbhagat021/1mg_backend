@@ -15,7 +15,7 @@ function App() {
       {/* <AyurvedaPage/> */}
 
 
-<PersonalCarePage/>
+{/* <PersonalCarePage/> */}
       <Footer/>
     </div>
   );

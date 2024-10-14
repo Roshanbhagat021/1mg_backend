@@ -30,12 +30,12 @@ function Carosel() {
                 <Box w="30%">
                     <Link
                         target="_blank"
-                        href="https://www.1mg.com/labs/test/advanced-cardiac-risk-markers-34953"
+                        href="https://www.1mg.com/categories/featured/tata-1mg-healthcare-products-664"
                     >
                         <Image
                             h="100%"
                             w="100%"
-                            src="https://onemg.gumlet.io/a_ignore,w_480,h_200,c_fit,q_auto,f_auto/cfd81003-d040-444c-abac-53ffadbfc2c1.png"
+                            src="https://onemg.gumlet.io/diagnostics%2F2024-01%2F1706088937_1948x800+%2827%29.png"
                         />
                     </Link>
                 </Box>

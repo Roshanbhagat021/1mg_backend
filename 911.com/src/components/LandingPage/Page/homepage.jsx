@@ -43,7 +43,7 @@ const ALLProductsBrands = () => {
           <Image
             w="95%"
             m="auto"
-            src="https://res.cloudinary.com/du8msdgbj/image/upload/v1647251796/ueyxzzku83yuvpqxyrwe.png"
+            src="https://onemg.gumlet.io/marketing/d037f049-0426-43b5-b365-c89ccd788d2d.png"
           />
         </Box>
         <Box mt="2rem">

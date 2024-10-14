@@ -6,8 +6,14 @@ const Cart = require("./cart.model");
 const {Product} = require("../products/product.model");
 
 const authMiddleWare = async (req, res, next) => {
-  const token = req.headers.token;
+  // const token = req.headers.token;
   // console.log("Token", token);
+  const authHeader = req.headers.Authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return res.status(401).send("Token missing or malformed");
+  }
+
+  const token = authHeader.split(" ")[1]; // Extract the token
   try {
     
     if (!token) {
@@ -33,7 +39,7 @@ const authMiddleWare = async (req, res, next) => {
 
 cartRoute.use(authMiddleWare);
 
-cartRoute.get("", async (req, res) => {
+cartRoute.get("/", async (req, res) => {
   try {
     let carts = await Cart.find({ user: req.userId }).populate([
       {
@@ -48,7 +54,7 @@ cartRoute.get("", async (req, res) => {
   }
 });
 
-cartRoute.post("", async (req, res) => {
+cartRoute.post("/", async (req, res) => {
   try {
     let dbProduct = await Product.findOne({ _id: req.body.product });
     let cartItem = await Cart.findOne({ product: req.body.product });

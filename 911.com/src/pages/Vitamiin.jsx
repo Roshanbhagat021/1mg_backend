@@ -22,9 +22,9 @@ const VitaminsProducts = () => {
             <Box width={"30%"} border='1px solid black' display={'flex'} alignItems='center' justifyContent='space-between'>
                 <Text fontSize='14px' color='#212121'>Sort By :</Text>
             <Select width={'70%'} fontSize='14px' color='#212121'>
-                <option value="">AVCACVAVC</option>
-                <option value="">AVCACVAVC</option>
-                <option value="">AVCACVAVC</option>
+                <option value="">Rating</option>
+                <option value="">Price</option>
+                <option value="">Most Sale</option>
             </Select>
             </Box>
             

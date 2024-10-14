@@ -7,14 +7,14 @@ import {
   Spacer,
   Text,
 } from "@chakra-ui/react";
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.svg'
 import { IoIosSearch } from "react-icons/io";
 
 function CartNavBar() {
   return (
     <Box bg="#fff" borderBottom="1px solid #f1f4f6">
       <Flex gap="2" minWidth="max-content" alignItems="center">
-        <Box>
+        <Box ml ="4">
           <Image src={logo} alt="911.com" width="80%" />
         </Box>
         <Box
